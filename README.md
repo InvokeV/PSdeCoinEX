@@ -2,6 +2,12 @@
 
 PowerShellで仮想通貨のシステムトレードにチャレンジ！  
 
+
+## サンプルの紹介：
+* Sample_01.ps1　取引所別のBit/Ask値一覧
+* Sample_02.ps1　bitFlyer bitFlyerFX
+
+
 ## API対応取引所：
 * BTCBOX (https://www.btcbox.co.jp/)
 
