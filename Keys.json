@@ -1,0 +1,12 @@
+[
+    {
+        "SiteName":  "bitFlyer",
+        "APIKey":  "取得したAPIキー",
+        "SecretKey":  "取得したシークレットキー"
+    },
+    {
+        "SiteName":  "bitFlyerFX",
+        "APIKey":  "取得したAPIキー",
+        "SecretKey":  "取得したシークレットキー"
+    }
+]
