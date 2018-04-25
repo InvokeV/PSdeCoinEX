@@ -180,7 +180,7 @@ Function Cancel-Order($SiteName, $OrderID){
     $Amount = 0.001
 
 #価格情報
-    #sGet-Price $SiteName
+    #Get-Price $SiteName
 #資産情報
     #Get-Asset $SiteName $AssetName
 #売買注文
