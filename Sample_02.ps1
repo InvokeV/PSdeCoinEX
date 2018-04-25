@@ -121,7 +121,7 @@ Function Set-Order($SiteName, $Side, $Type, $Price, $Amount){
     }    
 }
 
-Function Get-Order($SiteName, $OrderID){
+Function Get-Order($SiteName){
     Switch ($SiteName)
     {        
         "bitFlyer"{
@@ -180,7 +180,7 @@ Function Cancel-Order($SiteName, $OrderID){
     $Amount = 0.001
 
 #価格情報
-    #Get-Price $SiteName
+    #sGet-Price $SiteName
 #資産情報
     #Get-Asset $SiteName $AssetName
 #売買注文
