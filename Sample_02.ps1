@@ -7,7 +7,7 @@
     $res = Invoke-RestMethod $Url -Method GET
     Switch ($SiteName)
     {
-        {"bitFlyer" -Or "bitFlyerFX"}{  
+       {($_ -eq "bitFlyer") -Or ($_ -eq "bitFlyerFX")}{  
             $AskPrice = $res.asks[0].price
             $BidPrice = $res.bids[0].price
             $AskSize = $res.asks[0].size
@@ -33,7 +33,7 @@ Function Get-Header($SiteName, $Query){
     $SecretKey = $Keys.SecretKey 
     Switch ($SiteName)
     {        
-        {"bitFlyer" -Or "bitFlyerFX"}{           
+        {($_ -eq "bitFlyer") -Or ($_ -eq "bitFlyerFX")}{           
             $Nonce = ([DateTimeOffset](Get-Date)).ToUnixTimeMilliseconds()
             $Query = $Nonce.ToString() + $Query
             $KeyData =  [System.Text.Encoding]::UTF8.GetBytes($SecretKey)
@@ -189,3 +189,6 @@ Function Cancel-Order($SiteName, $OrderID){
     #Get-Order $SiteName
 #注文取消し
     #Cancel-Order $SiteName $OrderID
+
+    Set-Order $SiteName $Side $Type $Price $Amount
+
