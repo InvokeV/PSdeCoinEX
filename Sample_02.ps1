@@ -36,8 +36,8 @@ Function Get-Header($SiteName, $Query){
         {($_ -eq "bitFlyer") -Or ($_ -eq "bitFlyerFX")}{           
             $Nonce = ([DateTimeOffset](Get-Date)).ToUnixTimeMilliseconds()
             $Query = $Nonce.ToString() + $Query
-            $KeyData =  [System.Text.Encoding]::UTF8.GetBytes($SecretKey)
-            $QueryData =  [System.Text.Encoding]::UTF8.GetBytes($Query)
+            $KeyData = [System.Text.Encoding]::UTF8.GetBytes($SecretKey)
+            $QueryData = [System.Text.Encoding]::UTF8.GetBytes($Query)
             Add-Type -AssemblyName System.Security
             $HMAC = New-Object System.Security.Cryptography.HMACSHA256
             $HMAC.Key = $KeyData
@@ -189,6 +189,3 @@ Function Cancel-Order($SiteName, $OrderID){
     #Get-Order $SiteName
 #注文取消し
     #Cancel-Order $SiteName $OrderID
-
-    Set-Order $SiteName $Side $Type $Price $Amount
-
