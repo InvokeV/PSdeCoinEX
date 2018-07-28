@@ -18,5 +18,20 @@
         "SiteName":  "ZaifFX",
         "APIKey":  "取得したAPIキー",
         "SecretKey":  "取得したシークレットキー"
+    },
+    {
+        "Site":  "bitbank",
+        "APIKey":  "取得したAPIキー",
+        "SecretKey":  "取得したシークレットキー"
+    },
+    {
+        "Site":  "QUOINE",
+        "APIKey":  "取得したAPIキー",
+        "SecretKey":  "取得したシークレットキー"
+    },
+    {
+        "Site":  "QUOINEFX",
+        "APIKey":  "取得したAPIキー",
+        "SecretKey":  "取得したシークレットキー"
     }
 ]
