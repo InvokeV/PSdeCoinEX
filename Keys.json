@@ -8,5 +8,15 @@
         "SiteName":  "bitFlyerFX",
         "APIKey":  "取得したAPIキー",
         "SecretKey":  "取得したシークレットキー"
+    },
+    {
+        "SiteName":  "Zaif",
+        "APIKey":  "取得したAPIキー",
+        "SecretKey":  "取得したシークレットキー"
+    },
+    {
+        "SiteName":  "ZaifFX",
+        "APIKey":  "取得したAPIキー",
+        "SecretKey":  "取得したシークレットキー"
     }
 ]
