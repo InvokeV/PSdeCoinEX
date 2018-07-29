@@ -166,7 +166,7 @@ Function Get-Asset($SiteName, $AssetName){
             $res = Invoke-RestMethod $Url -Method GET -Headers $Header
             $Asset =  ($res.data.assets | Where asset -eq "$AssetName").free_amount
         }
-        "QUOINE"{
+        {($_ -eq "QUOINE") -Or ($_ -eq "QUOINEFX")}{  
             $Url = "https://api.quoine.com/accounts/balance/"       
             $Query = "/accounts/balance"    
             $Header =  Get-Header $SiteName $Query
