@@ -5,7 +5,7 @@
         "bitFlyerFX"{$Url = "https://api.bitflyer.jp/v1/getboard?product_code=FX_BTC_JPY"}
         {($_ -eq "Zaif") -Or ($_ -eq "ZaifFX")}{$Url = "https://api.zaif.jp/api/1/depth/btc_jpy"}
         "bitbank"{$Url = "https://public.bitbank.cc/btc_jpy/depth"}
-        "QUOINE"{$Url = "https://api.quoine.com/products/5/price_levels"}
+        {($_ -eq "QUOINE") -Or ($_ -eq "QUOINEFX")}{$Url = "https://api.quoine.com/products/5/price_levels"}
     }
 
     [int]$AskPrice = 0
@@ -34,7 +34,7 @@
             $AskSize = $res.data.asks[0][1]
             $BidSize = $res.data.bids[0][1]
         }
-        "QUOINE"{
+        {($_ -eq "QUOINE") -Or ($_ -eq "QUOINEFX")}{  
             $AskPrice = $res.sell_price_levels[0][0]
             $BidPrice = $res.sell_price_levels[0][0]
             $AskSize = $res.buy_price_levels[0][1]
