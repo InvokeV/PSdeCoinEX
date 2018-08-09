@@ -369,11 +369,11 @@ Function Get-Order($SiteName){
             Return $res.data.orders        
         }
         {($_ -eq "QUOINE") -Or ($_ -eq "QUOINEFX")}{  
-            $Url = "https://api.quoine.com/orders/$OrderID"
-            $Query = "/orders/$OrderID"    
+            $Url = "https://api.quoine.com/orders?funding_currency=JPY&product_id=5&status=live&with_details=1"
+            $Query = "/orders?funding_currency=JPY&product_id=5&status=live&with_details=1"    
             $Header = Get-Header $SiteName $Query
             $res = Invoke-RestMethod $Url -Method GET -Headers $Header
-            Return $res
+            Return $res.models
         }
     }
 }
@@ -481,7 +481,7 @@ Function Close-FX($SiteName, $CloseOrderID, $BtcPrice){
 }
 
 #取引所 (bitFlyer, bitFlyerFX, Zaif, ZaifFX, bitbank, QUOINE, QUOINEFX)
-    $SiteName = "QUOINEFX"
+    $SiteName = "QUOINE"
 #資産 (jpy, btc)
     $AssetName = "jpy"
 #売買 (sell, buy)

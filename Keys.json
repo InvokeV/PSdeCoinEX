@@ -33,5 +33,10 @@
         "Site":  "QUOINEFX",
         "APIKey":  "取得したAPIキー",
         "SecretKey":  "取得したシークレットキー"
+    },
+    {
+        "Site":  "BTCBOX",
+        "APIKey":  "取得したAPIキー",
+        "SecretKey":  "取得したシークレットキー"
     }
 ]
